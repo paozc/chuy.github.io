@@ -1,0 +1,165 @@
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #aff2c7;
+  color: #000000;
+}
+
+h1, h2, h3 {
+  color: #5a3e2b;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Menú principal */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: #72db87;
+  border-bottom: 2px solid #5c8e3f;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(64, 219, 75);
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #3bb12e;
+}
+
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(62, 181, 22, 0.15);
+  min-width: 180px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  background-color: #52dc0d;
+  color: #333;
+}
+
+.submenu li a:hover {
+  background-color: #2e6f2e;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: rgb(140, 221, 93);
+  padding: 10px;
+  border-top: 1px solid #309748;
+  margin-top: 30px;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #1e7222;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #6fa441;
+}
+
+/* Formularios */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button,
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #7bc889;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #8df798;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+
+  .submenu li a {
+    padding-left: 25px;
+  }
+}
